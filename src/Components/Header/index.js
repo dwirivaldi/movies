@@ -16,7 +16,7 @@ const HeaderComponent = () => {
     <header className="header">
       <Navbar bg="dark" expand="lg">
         <Container>
-          <Navbar.Brand>My Entertainment</Navbar.Brand>
+          <Navbar.Brand>Soku Movies</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
