@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 const HeaderComponent = () => {
   const navData = [
-    { name: "Home", link: "/" },
+    { name: "Home", link: "/home" },
     { name: "Movies", link: "/movies" },
     { name: "Tv Series", link: "/series" },
     { name: "Search", link: "/search" },

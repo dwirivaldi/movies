@@ -2,8 +2,10 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -40,6 +42,18 @@ function Login() {
             .then((res) => {
               const validatedRequestToken = res.data.request_token;
               console.log(validatedRequestToken);
+              axios
+                .post(
+                  `${process.env.REACT_APP_BASEURL}authentication/session/new?api_key=${process.env.REACT_APP_NOT_SECRET_CODE}`,
+                  {
+                    request_token: validatedRequestToken,
+                  }
+                )
+                .then((res) => {
+                  const sessionID = res.data.session_id;
+                  console.log(sessionID);
+                  navigate("/home");
+                });
             });
         });
     },
