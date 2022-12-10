@@ -71,6 +71,7 @@ const DetailsContainer = () => {
   }, []);
 
   const renderDataHtml = () => {
+    const popularity = content.popularity;
     const ImageURL = content.poster_path
       ? img_300 + content.poster_path
       : img_not_available;
@@ -114,6 +115,7 @@ const DetailsContainer = () => {
                   <li>{original_language}</li>
                   <li>{adult}</li>
                   <li>ID : {id}</li>
+                  <li>Popularity : {popularity}</li>
                 </ul>
               </div>
               <ul className="card__meta">

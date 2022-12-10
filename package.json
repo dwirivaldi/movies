@@ -1,5 +1,5 @@
 {
-  "name": "my-entertainment",
+  "name": "sokumovies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.6.4",
     "react-bootstrap": "^2.5.0",
@@ -16,7 +17,8 @@
     "react-paginate": "^8.1.3",
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
