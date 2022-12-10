@@ -12,11 +12,9 @@ function Login() {
     validationSchema: Yup.object({
       username: Yup.string()
         .min(6, "Minimum 6 Characters")
-        .max(15, "Must be 15 characters or less")
         .required("Required"),
       password: Yup.string()
         .min(6, "Minimum 6 Characters")
-        .max(20, "Must be 20 characters or less")
         .required("Required"),
     }),
     onSubmit: (values) => {
@@ -30,6 +28,19 @@ function Login() {
           // handle response
           const requestToken = response.data.request_token;
           console.log(requestToken);
+          axios
+            .post(
+              `${process.env.REACT_APP_BASEURL}authentication/token/validate_with_login?api_key=${process.env.REACT_APP_NOT_SECRET_CODE}`,
+              {
+                username: values.username, // dwirivaldi
+                password: values.password, // rivaldy21
+                request_token: requestToken,
+              }
+            )
+            .then((res) => {
+              const validatedRequestToken = res.data.request_token;
+              console.log(validatedRequestToken);
+            });
         });
     },
   });
