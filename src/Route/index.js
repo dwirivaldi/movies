@@ -13,8 +13,8 @@ const RouteComponent = () => {
       <BrowserRouter>
         <HeaderComponent />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<HomeContainer />} />
+          <Route path="/" element={<HomeContainer />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/movies" element={<MoviesContainer />} />
           <Route path="/series" element={<TvSeriesContainer />} />
           <Route path="/search" element={<SearchContainer />} />

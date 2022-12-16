@@ -52,7 +52,7 @@ function Login() {
                 .then((res) => {
                   const sessionID = res.data.session_id;
                   console.log(sessionID);
-                  navigate("/home");
+                  navigate("/profile");
                 });
             });
         });

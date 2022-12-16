@@ -11,3 +11,6 @@ Step :
     - react-paginate
     - react-router-dom
     - react-scripts
+3. Login
+    - user : dwirivaldi
+    - pass : rivaldy21
